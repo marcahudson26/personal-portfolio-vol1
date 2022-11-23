@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    font-family: 'Noto Sans Vai', sans-serif;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white
+}
+
+header {
+    background-color: rgba(124, 124, 125, 0.518);
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-family: "Satisfy";
+    font-size: 80px;
+    font-weight: normal;
+    margin-left: 40px;
+}
+h2 {
+    font-size: xx-large;
+    margin-left: 13px;
+    font-weight: bolder;
+    font-size: 70px;
+}
+
+nav {
+    align-self: center;
+}
+
+nav li {
+    display: inline;
+    margin: 40px;
+}
+
+.flex-hero {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+
+}
+.flex-hero p {
+    margin-bottom: 28px;
+}
+
+
+.child1 {
+    margin: auto
+}
+
+body {
+    background-color: black;
+    color: white;
+}
