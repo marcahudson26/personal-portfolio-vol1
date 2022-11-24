@@ -1,14 +1,16 @@
 * {
-    margin: 0;
+
     font-family: 'Noto Sans Vai', sans-serif;
 }
 
 body {
     background-color: rgb(15, 14, 14);
     color: white;
+    margin: 0;
 }
 
-nav a , footer a {
+nav a,
+footer a {
     text-decoration: none;
     color: white
 }
@@ -23,16 +25,29 @@ header h1 {
     font-family: "Satisfy";
     font-size: 80px;
     font-weight: normal;
-    margin-left: 40px;
-    position: absolute
+    margin: 0;
+    position: absolute;
+    left: 40px;
+
 }
 
-h2 {
-    font-size: xx-large;
-    margin-left: 13px;
-    font-weight: bolder;
-    font-size: 70px;
-    text-transform: uppercase;
+.hero {
+   display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+    justify-items: center;
+    height: 800px;
+    align-items: center;
+}
+
+
+.hero .subtext {
+    display: block;
+    font-size: 20px;
+}
+.hero .name {
+    font-size: 50px;
+    margin-left: 50px;
 }
 
 h3 {
@@ -41,20 +56,25 @@ h3 {
     font-size: 30px;
     margin-bottom: 30px;
 }
+
 h4 {
     text-align: center;
     margin-bottom: 60px;
 }
+
 h4 a {
     background-color: white;
     border-radius: 20px;
     padding: 10px;
+    text-decoration: none;
+    color: black;
 }
 
 nav {
     align-self: center;
 }
-nav ul{
+
+nav ul {
     padding: 10px;
 
 }
@@ -62,23 +82,15 @@ nav ul{
 nav li {
     display: inline;
     padding: 8px 10px;
-  
+
 }
 
-.flex-hero {
-    display: flex;
-    align-self: center;
-    justify-content: space-between;
-    margin: 0 30px 10px 30px;
+.hero {
+    background: transparent url(/assets/profilepic.png) no-repeat;
+    background-position: right -50px;
+    margin-bottom: 60px;
 }
 
-.flex-hero p {
-    margin-bottom: 28px;
-}
-
-.child1 {
-    margin: auto
-}
 
 .flex-about-me {
     display: flex;
@@ -93,51 +105,60 @@ nav li {
 }
 
 
-.grid-container{
+.grid-container {
     display: grid;
-    gap:20px;
+    gap: 20px;
     justify-items: center;
     justify-items: stretch;
     margin: 0 50px 100px 50px;
-    
-    
+
+
 }
-.grid-container > * {
+
+.grid-container>* {
     height: 500px;
     background-size: cover;
     background-position: center;
     border: 1px solid white;
-    
+
 
 }
-.grid-container :first-child{
+
+.grid-container :first-child {
     grid-column: span 2;
-   
+
 }
+
 .img1 {
-    background-image:url(/assets/placeholder1.webp);
+    background-image: url(/assets/placeholder1.webp);
 }
+
 .img2 {
     background-image: url(/assets/placeholder2.webp);
 }
-.img3{
+
+.img3 {
     background-image: url(/assets/placeholder3.webp);
 }
-.img4{
+
+.img4 {
     background-image: url(/assets/placeholder4.webp);
 }
-.img5{
+
+.img5 {
     background-image: url(/assets/placeholder5.webp);
 }
+
 .flex-footer {
     display: flex;
     justify-content: space-between;
     height: 50px;
-   align-items: center;
-   margin: 0 20px 0 20px;
+    align-items: center;
+    margin: 0 20px 0 20px;
 
 }
+
 .flex-footer li {
     display: inline;
-    margin:40px;
+    margin: 40px;
 }
