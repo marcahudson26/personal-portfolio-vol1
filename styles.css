@@ -40,21 +40,26 @@ h2 {
   h2 .typewriter {
     width: 11ch;
     animation: 
-      typing 2s steps(11),
+      typing 5s steps(11) infinite,
       blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
     font-family: monospace;
-    font-size: 1em;
     position: absolute;
     top:35px;
     left: 20px;
   }
   
   @keyframes typing {
-    from {
+    0% {
       width: 0
+    }
+    30% {
+      width: 11ch
+    }
+    100% {
+      width: 11ch
     }
   }
       
@@ -88,7 +93,6 @@ h2 {
 h3 {
     text-align: center;
     size: 10px;
-    font-size: 30px;
     margin-bottom: 30px;
 }
 
