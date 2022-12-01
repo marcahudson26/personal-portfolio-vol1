@@ -93,7 +93,6 @@ h2 {
 h3 {
     text-align: center;
     size: 10px;
-    margin-bottom: 30px;
 }
 
 h4 {
@@ -139,15 +138,15 @@ nav li {
     background-color: white;
     text-align: center;
     margin: 0 100px 80px 100px;
-    gap: 30px;
     padding: 15px;
     border-radius: 20px;
+    box-shadow: 0 0 34px black inset;
 }
 
 
 .grid-container {
     display: grid;
-    gap: 20px;
+    gap: 30px;
     justify-items: center;
     justify-items: stretch;
     margin: 0 50px 100px 50px;
@@ -155,38 +154,58 @@ nav li {
 
 }
 
-.grid-container>* {
+.grid-container >a span{
+    background: black;
+    color: white;
+    padding: 30px;
+    border-radius: 29px;
+    position: absolute;
+    bottom: 0px;
+    left: calc(50% - 120px);
+    width: 150px;
+    text-align: center;
+
+}
+
+.grid-container > a {
     height: 500px;
     background-size: cover;
-    background-position: center;
-    border: 1px solid white;
+    background-position: top;
+    border-radius: 20px;
+    position: relative;
 
 
 }
 
-.grid-container :first-child {
-    grid-column: span 2;
+.grid-container > a:first-child {
+        grid-column: span 2;
+        background-size: 668px;
+    
 
 }
 
-.img1 {
-    background-image: url(/assets/placeholder1.webp);
+.grid-container > a.img1  {
+    background-image: url(./assets/justfeast.gif);
+   
+
 }
 
-.img2 {
-    background-image: url(/assets/placeholder2.webp);
+.grid-container > a.img2 {
+    background-image: url(./assets/refactor.png);
+
 }
 
-.img3 {
-    background-image: url(/assets/placeholder3.webp);
+.grid-container > a.img3 {
+    background-image: url(./assets/website.png);
+    background-position: top left;
 }
 
-.img4 {
-    background-image: url(/assets/placeholder4.webp);
+.grid-container > a.img4 {
+    background-image: url(./assets/comingsoon.jpg);
 }
 
-.img5 {
-    background-image: url(/assets/placeholder5.webp);
+.grid-container > a.img5 {
+    background-image: url(./assets/comingsoon2.jpeg);
 }
 
 .flex-footer {
@@ -202,3 +221,47 @@ nav li {
     display: inline;
     margin: 40px;
 }
+
+@media only screen and (max-width: 768px) {
+    header{
+        flex-direction: column;
+    }
+    header h1{
+        position: relative;
+        text-align: center;
+        left:0;
+    }
+    
+    .flex-about-me{
+        margin: 2px;
+        
+    }
+    .hero{
+        background-position: center
+    }
+    .grid-container >a span{
+        width: auto;
+        left: 0;
+        padding: 10px;
+
+    
+    }
+    .grid-container{
+        margin: 2px;
+    }
+  }
+
+  @media only screen and (max-width: 540px){
+    nav {
+        display: none;
+    }
+    .hero{
+        background-position: center
+    }
+    .grid-container > a{
+        grid-column: span 2;
+    
+    }
+    
+    
+  }
