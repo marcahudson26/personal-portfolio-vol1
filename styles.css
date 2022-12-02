@@ -1,18 +1,21 @@
+:root{
+    --main-dark-color: rgb(15, 14, 14);
+    --main-light-color: rgb(255, 255, 255);
+}
 * {
-
     font-family: 'Noto Sans Vai', sans-serif;
 }
 
 body {
-    background-color: rgb(15, 14, 14);
-    color: white;
+    background-color: var(--main-dark-color);
+    color: var(--main-light-color);
     margin: 0;
 }
 
 nav a,
 footer a {
     text-decoration: none;
-    color: white
+    color: var(--main-light-color)
 }
 
 header {
@@ -28,46 +31,47 @@ header h1 {
     margin: 0;
     position: absolute;
     left: 40px;
-
 }
 
 h2 {
     display: grid;
-    color: white;
+    color: var(--main-light-color);
     position: relative;
-  }
-  
-  h2 .typewriter {
+}
+
+h2 .typewriter {
     width: 11ch;
-    animation: 
-      typing 5s steps(11) infinite,
-      blink .5s step-end infinite alternate;
+    animation:
+        typing 5s steps(11) infinite,
+        blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
     font-family: monospace;
     position: absolute;
-    top:35px;
+    top: 35px;
     left: 20px;
-  }
-  
-  @keyframes typing {
+}
+
+@keyframes typing {
     0% {
-      width: 0
+        width: 0
     }
+
     30% {
-      width: 11ch
+        width: 11ch
     }
+
     100% {
-      width: 11ch
+        width: 11ch
     }
-  }
-      
-  @keyframes blink {
+}
+
+@keyframes blink {
     50% {
-      border-color: transparent
+        border-color: transparent
     }
-  }
+}
 
 .hero {
     display: grid;
@@ -76,7 +80,6 @@ h2 {
     justify-items: center;
     height: 800px;
     align-items: center;
-    
 }
 
 
@@ -87,7 +90,6 @@ h2 {
 
 .hero .name {
     font-size: 50px;
-    
 }
 
 h3 {
@@ -101,11 +103,11 @@ h4 {
 }
 
 h4 a {
-    background-color: white;
+    background-color: var(--main-light-color);
     border-radius: 20px;
     padding: 10px;
     text-decoration: none;
-    color: black;
+    color: var(--main-dark-color);
 }
 
 nav {
@@ -114,97 +116,85 @@ nav {
 
 nav ul {
     padding: 10px;
-
 }
 
 nav li {
     display: inline;
     padding: 8px 20px;
-
 }
 
 .hero {
-    background: transparent url(/assets/profilepic.png) no-repeat;
+    background: transparent url("/assets/profilepic.png") no-repeat; 
     background-position: right 0px;
     margin-bottom: 60px;
-
 }
 
 
 .flex-about-me {
     display: flex;
     flex-direction: column;
-    color: black;
-    background-color: white;
+    color: var(--main-dark-color);
+    background-color: var(--main-light-color);
     text-align: center;
     margin: 0 100px 80px 100px;
     padding: 15px;
     border-radius: 20px;
-    box-shadow: 0 0 34px black inset;
+    box-shadow: 0 0 34px var(--main-dark-color) inset;
 }
 
 
 .grid-container {
     display: grid;
-    gap: 30px;
-    justify-items: center;
+    gap: 60px;
     justify-items: stretch;
     margin: 0 50px 100px 50px;
-
-
 }
 
-.grid-container >a span{
-    background: black;
-    color: white;
+.grid-container>a span {
+    background: gray;
+    color: var(--main-dark-color);
     padding: 30px;
-    border-radius: 29px;
+    border-radius: 30px;
     position: absolute;
-    bottom: 0px;
-    left: calc(50% - 120px);
+    bottom: 10px;
+    left: calc(50% - 108px);
     width: 150px;
     text-align: center;
-
+    border: 2px solid var(--main-dark-color);
 }
 
-.grid-container > a {
+.grid-container>a {
     height: 500px;
     background-size: cover;
     background-position: top;
     border-radius: 20px;
     position: relative;
-
-
+    border: 2px solid var(--main-light-color);
 }
 
-.grid-container > a:first-child {
-        grid-column: span 2;
-        background-size: 668px;
-    
-
+.grid-container>a:first-child {
+    grid-column: span 2;
+    background-size: 668px;
 }
 
-.grid-container > a.img1  {
-    background-image: url(./assets/justfeast.gif);
-   
-
+.grid-container>a.img1 {
+    background-image: url(./assets/justfeast.gif) ;
 }
 
-.grid-container > a.img2 {
+.grid-container>a.img2 {
     background-image: url(./assets/refactor.png);
-
 }
 
-.grid-container > a.img3 {
+.grid-container>a.img3 {
     background-image: url(./assets/website.png);
     background-position: top left;
 }
 
-.grid-container > a.img4 {
+.grid-container>a.img4 {
     background-image: url(./assets/comingsoon.jpg);
 }
 
-.grid-container > a.img5 {
+.grid-container>a.img5 {
     background-image: url(./assets/comingsoon2.jpeg);
 }
 
@@ -214,7 +204,6 @@ nav li {
     height: 50px;
     align-items: center;
     margin: 0 20px 0 20px;
-
 }
 
 .flex-footer li {
@@ -223,45 +212,49 @@ nav li {
 }
 
 @media only screen and (max-width: 768px) {
-    header{
+    header {
         flex-direction: column;
     }
-    header h1{
+
+    header h1 {
         position: relative;
         text-align: center;
-        left:0;
+        left: 0;
     }
-    
-    .flex-about-me{
+
+    .flex-about-me {
         margin: 2px;
-        
+
     }
-    .hero{
+
+    .hero {
         background-position: center
     }
-    .grid-container >a span{
+
+    .grid-container>a span {
         width: auto;
         left: 0;
         padding: 10px;
 
-    
+
     }
-    .grid-container{
+
+    .grid-container {
         margin: 2px;
     }
-  }
+}
 
-  @media only screen and (max-width: 540px){
+@media only screen and (max-width: 540px) {
     nav {
         display: none;
     }
-    .hero{
+
+    .hero {
         background-position: center
     }
-    .grid-container > a{
+
+    .grid-container>a {
         grid-column: span 2;
-    
+
     }
-    
-    
-  }
+}
