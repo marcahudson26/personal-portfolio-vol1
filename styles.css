@@ -124,7 +124,7 @@ nav li {
 }
 
 .hero {
-    background: transparent url("/assets/profilepic.png") no-repeat; 
+    background: transparent url(/assets/profilepic.png) no-repeat; 
     background-position: right 0px;
     margin-bottom: 60px;
 }
@@ -178,7 +178,7 @@ nav li {
 }
 
 .grid-container>a.img1 {
-    background-image: url(./assets/justfeast.gif) ;
+    background-image: url(./assets/justfeast.gif);
 }
 
 .grid-container>a.img2 {
