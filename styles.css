@@ -1,3 +1,4 @@
+/* color variables */
 :root{
     --main-dark-color: rgb(15, 14, 14);
     --main-light-color: rgb(255, 255, 255);
@@ -5,25 +6,38 @@
 * {
     font-family: 'Noto Sans Vai', sans-serif;
 }
-
+/* body styling */
 body {
     background-color: var(--main-dark-color);
     color: var(--main-light-color);
     margin: 0;
 }
-
-nav a,
-footer a {
-    text-decoration: none;
-    color: var(--main-light-color)
-}
-
+/* header styling */
 header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
 }
+/* nav and footer styling */
+nav a,
+footer a {
+    text-decoration: none;
+    color: var(--main-light-color)
+}
+nav {
+    align-self: center;
+}
 
+nav ul {
+    padding: 10px;
+}
+
+nav li {
+    display: inline;
+    padding: 8px 20px;
+}
+
+/* h1 portfolio styling */
 header h1 {
     font-family: "Satisfy";
     font-size: 80px;
@@ -32,7 +46,7 @@ header h1 {
     position: absolute;
     left: 40px;
 }
-
+/* header 2 and typewriter animation */
 h2 {
     display: grid;
     color: var(--main-light-color);
@@ -51,6 +65,12 @@ h2 .typewriter {
     position: absolute;
     top: 35px;
     left: 20px;
+}
+
+h2 {
+    display: grid;
+    color: var(--main-light-color);
+    position: relative;
 }
 
 @keyframes typing {
@@ -72,7 +92,7 @@ h2 .typewriter {
         border-color: transparent
     }
 }
-
+/* hero image background and styling */
 .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -80,8 +100,10 @@ h2 .typewriter {
     justify-items: center;
     height: 800px;
     align-items: center;
+    background: transparent url(/assets/profilepic.png) no-repeat; 
+    background-position: right 0px;
+    margin-bottom: 60px;
 }
-
 
 .hero .subtext {
     display: block;
@@ -91,7 +113,20 @@ h2 .typewriter {
 .hero .name {
     font-size: 50px;
 }
+/* about me styling */
+.flex-about-me {
+    display: flex;
+    flex-direction: column;
+    color: var(--main-dark-color);
+    background-color: var(--main-light-color);
+    text-align: center;
+    margin: 0 100px 80px 100px;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 0 34px var(--main-dark-color) inset;
+}
 
+/* other header styling */
 h3 {
     text-align: center;
     size: 10px;
@@ -110,39 +145,7 @@ h4 a {
     color: var(--main-dark-color);
 }
 
-nav {
-    align-self: center;
-}
-
-nav ul {
-    padding: 10px;
-}
-
-nav li {
-    display: inline;
-    padding: 8px 20px;
-}
-
-.hero {
-    background: transparent url(/assets/profilepic.png) no-repeat; 
-    background-position: right 0px;
-    margin-bottom: 60px;
-}
-
-
-.flex-about-me {
-    display: flex;
-    flex-direction: column;
-    color: var(--main-dark-color);
-    background-color: var(--main-light-color);
-    text-align: center;
-    margin: 0 100px 80px 100px;
-    padding: 15px;
-    border-radius: 20px;
-    box-shadow: 0 0 34px var(--main-dark-color) inset;
-}
-
-
+/*  my projects grid container and styling */
 .grid-container {
     display: grid;
     gap: 60px;
@@ -198,6 +201,7 @@ nav li {
     background-image: url(./assets/comingsoon2.jpeg);
 }
 
+/* footer styling */
 .flex-footer {
     display: flex;
     justify-content: flex-end;
@@ -210,7 +214,7 @@ nav li {
     display: inline;
     margin: 40px;
 }
-
+/* media query */
 @media only screen and (max-width: 768px) {
     header {
         flex-direction: column;
