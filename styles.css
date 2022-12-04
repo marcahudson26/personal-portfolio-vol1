@@ -1,29 +1,61 @@
 /* color variables */
-:root{
-    --main-dark-color: rgb(15, 14, 14);
-    --main-light-color: rgb(255, 255, 255);
+:root {
+    --main-color: rgb(15, 14, 14);
+    --main-contrast-color: rgb(255, 255, 255);
 }
+
 * {
     font-family: 'Noto Sans Vai', sans-serif;
 }
+
 /* body styling */
 body {
-    background-color: var(--main-dark-color);
-    color: var(--main-light-color);
+    background-color: var(--main-color);
+    color: var(--main-contrast-color);
     margin: 0;
 }
+
+/* other header styling */
+h3 {
+    text-align: center;
+    size: 10px;
+}
+
 /* header styling */
 header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
 }
+
+header h1 {
+    font-family: "Satisfy";
+    font-size: 80px;
+    font-weight: normal;
+    margin: 0;
+    position: absolute;
+    left: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    header h1 {
+        position: relative;
+        text-align: center;
+        left: 0;
+    }
+}
+
 /* nav and footer styling */
 nav a,
 footer a {
     text-decoration: none;
-    color: var(--main-light-color)
+    color: var(--main-contrast-color)
 }
+
 nav {
     align-self: center;
 }
@@ -37,23 +69,20 @@ nav li {
     padding: 8px 20px;
 }
 
-/* h1 portfolio styling */
-header h1 {
-    font-family: "Satisfy";
-    font-size: 80px;
-    font-weight: normal;
-    margin: 0;
-    position: absolute;
-    left: 40px;
+@media only screen and (max-width: 540px) {
+    nav li {
+        display: block;
+    }
 }
-/* header 2 and typewriter animation */
-h2 {
+
+/* hero syles*/
+.hero h2 {
     display: grid;
-    color: var(--main-light-color);
+    color: var(--main-contrast-color);
     position: relative;
 }
 
-h2 .typewriter {
+.hero h2 .typewriter {
     width: 11ch;
     animation:
         typing 5s steps(11) infinite,
@@ -65,12 +94,6 @@ h2 .typewriter {
     position: absolute;
     top: 35px;
     left: 20px;
-}
-
-h2 {
-    display: grid;
-    color: var(--main-light-color);
-    position: relative;
 }
 
 @keyframes typing {
@@ -92,6 +115,7 @@ h2 {
         border-color: transparent
     }
 }
+
 /* hero image background and styling */
 .hero {
     display: grid;
@@ -100,7 +124,7 @@ h2 {
     justify-items: center;
     height: 800px;
     align-items: center;
-    background: url(./assets/profilepic.png) no-repeat; 
+    background: url(./assets/profilepic.png) no-repeat;
     background-position: right 0px;
     margin-bottom: 60px;
 }
@@ -113,37 +137,45 @@ h2 {
 .hero .name {
     font-size: 50px;
 }
+
+@media only screen and (max-width: 768px) {
+
+    .hero {
+        background-position: center
+    }
+}
+
 /* about me styling */
 .flex-about-me {
     display: flex;
     flex-direction: column;
-    color: var(--main-dark-color);
-    background-color: var(--main-light-color);
+    color: var(--main-color);
+    background-color: var(--main-contrast-color);
     text-align: center;
     margin: 0 100px 80px 100px;
     padding: 15px;
     border-radius: 20px;
-    box-shadow: 0 0 34px var(--main-dark-color) inset;
+    box-shadow: 0 0 34px var(--main-color) inset;
 }
 
-/* other header styling */
-h3 {
-    text-align: center;
-    size: 10px;
-}
-
-h4 {
-    text-align: center;
+/* cv styling */
+#C-V {
     margin-bottom: 60px;
 }
 
-h4 a {
-    background-color: var(--main-light-color);
+#C-V a {
+    text-align: center;
+    background-color: var(--main-contrast-color);
     border-radius: 20px;
     padding: 10px;
     text-decoration: none;
-    color: var(--main-dark-color);
+    color: var(--main-color);
+    display: block;
+    width: 150px;
+    margin: 0 auto;
 }
+
+
 
 /*  my projects grid container and styling */
 .grid-container {
@@ -155,7 +187,7 @@ h4 a {
 
 .grid-container>a span {
     background: gray;
-    color: var(--main-dark-color);
+    color: var(--main-color);
     padding: 30px;
     border-radius: 30px;
     position: absolute;
@@ -163,7 +195,7 @@ h4 a {
     left: calc(50% - 108px);
     width: 150px;
     text-align: center;
-    border: 2px solid var(--main-dark-color);
+    border: 2px solid var(--main-color);
 }
 
 .grid-container>a {
@@ -172,7 +204,7 @@ h4 a {
     background-position: top;
     border-radius: 20px;
     position: relative;
-    border: 2px solid var(--main-light-color);
+    border: 2px solid var(--main-contrast-color);
 }
 
 .grid-container>a:first-child {
@@ -214,25 +246,13 @@ h4 a {
     display: inline;
     margin: 40px;
 }
+
 /* media query */
 @media only screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
-
-    header h1 {
-        position: relative;
-        text-align: center;
-        left: 0;
-    }
 
     .flex-about-me {
         margin: 2px;
 
-    }
-
-    .hero {
-        background-position: center
     }
 
     .grid-container>a span {
@@ -244,21 +264,14 @@ h4 a {
     }
 
     .grid-container {
-        margin: 2px;
+
+        margin-left: 2px;
+        margin-right: 2px;
     }
 }
 
 @media only screen and (max-width: 540px) {
-    nav {
-        display: none;
-    }
-
-    .hero {
-        background-position: center
-    }
-
     .grid-container>a {
         grid-column: span 2;
-
     }
 }
