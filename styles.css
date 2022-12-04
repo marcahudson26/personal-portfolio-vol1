@@ -100,7 +100,7 @@ h2 {
     justify-items: center;
     height: 800px;
     align-items: center;
-    background: transparent url(/assets/profilepic.png) no-repeat; 
+    background: url(./assets/profilepic.png) no-repeat; 
     background-position: right 0px;
     margin-bottom: 60px;
 }

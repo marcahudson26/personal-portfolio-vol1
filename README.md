@@ -5,4 +5,5 @@ This is my portfolio with information about myself and my journey so far, showca
 ## link to deployed application
 
 
-## screenshot
+## screenshot 
+![Screenshot](./assets/screnshot.png)
